@@ -1,1 +1,100 @@
-Através do Bootcamp Satander/Dio estou aprendendo novos conteúdos para minha carreira na área de Técnologia
+- Git - sistema de vercionamento (versões) de código distribuído (Linus Torcalds)
+- Complexo o suficiente para que suportasse pessoas do mundo todo trabalhando e alterando o mesmo código ao mesmo tempo. Ajuda a criar e monitorar diferentes versões do nosso cód; 
+- Open source;
+- Um software é feito de forma colaborativa, ou seja, mais de uma pessoa que escreve;
+- Git e GitHub são tecnologias totalmente diferentes mas complementares;
+- GitHub - É um repositório on-line (podem ter planos pagos);
+- Benefícios:
+	- Controle de versão
+	- Armazenamento em nuvem
+	- Trabalho em equipe
+	- Melhoria no seu código
+	- Reconhecimento
+- Comandos Básicos para um bom desempenho no terminal
+	- Windows
+		- Cd (mudar de  diretório)
+		- dir (listar o diretório)
+		- mkdir (Criar um novo diretório)
+		- del / rmdir (Deletar)
+		- cls (limpar)
+		- cd .. (voltar)
+		- git push origin master (para enviar para o git hub)
+		- git status
+		- cd (+ diretório)
+		- git add * (enviar tudo do diretório do github)
+		- git add ( + nome do arquivo que deseja enviar, somente aquele arquivo)
+		- git commit -m "Texto" (informações do que foi feito no arquivo)
+		- git pull origin master (para puxar um arquivo que esta no diretório. Exemplo: alguem fez alguma alteração e o commit que esta no github é diferente do que estamos tentando empurrar)
+		- Conflito de merge, quando há arquivos diferentes. Abra, veja qual é a alteração que deve permanecer e commita o arquivo.
+			- git add *
+			- git commit -m "resolve conflitos''
+			- git push origin master (para enviar para o git hub)
+			- git clone (+ https do repositório https://github.com/python/cpython.git)
+			- ls -a (mostrar em repositório oculto)
+			- git remote -v (Mostra os repositório remoto para onde ele está apontado)
+	- Unix
+		- cd
+		- Is
+		- mkdir
+		- rm-rf
+- Sha1
+	- Secure Hash Algorithm - Algoritmo de encriptação. Gera um conjunto de charateres identificador com 40 dígitos, único (serve como identificação);
+	- Ex: Caso haja qualquer alteração no arquivo/cód teremos um sha1 diferente;
+- Objetos fundamentais
+	- Blobs (blocos básicos de composição)
+		- echo -e 'conteudo' I git hash-object -- stdin(ele espera que seja um arquivo mas como vai mandar um texto tem que avisar);
+		- Blobs guarda o sha do arquivo (caracter identificador);
+	- Trees
+		- Armazena e aponta para tipos de blobs diferentes;  
+		- Guarda o sha e nome;
+		- Guardar toda estrutura de onde está o arquivo;
+		- Uma arvore aponta para outra arvore ou diretório para outro diretório;
+	- Commits
+	- Os commits tbm possuem um sha1 identificador dos seus meta dados;
+	- blobs > arvore > commits > arvore > blobs (se vc mudar qualquer coisa, tudo será alterado. Além do mais, ele tem as informações abaixo:
+	- 
+	- Vc consegue montar uma linha do tempo com tudo que aconteceu. Pq vc tem um histórico;
+	- 
+- Sistema distribuído
+	- Ex: Vc tem seu código no github (repositório), com 30 a 40 pessoa usando esse cód. 
+	- Caso aconteça alguma coisa com o local onde o cód está e se perca tudo precisaria acontecer tbm com essas pessoas que utilizam o código para que tudo seja destruído ou perdido.
+- Segurança
+- Chaves SSH e Tokens
+	- Chaves SSH é uma forma de fornecer uma conexão segura e encriptada entre duas maquinas. 
+	- Chave publica e privada
+- git init
+	- Estamos criando um repositório na pasta em questao
+	- Rodar o git init dentro da pasta livro-receitas. Inicializar para que ele comece a gerenciar e vercionar nosso cód.  
+	- Quando vc entra no diretório livro-receitas não aparece... pq é uma pasta oculta, para visualizar é necessário informar o comando.
+		- Flag ls -a, depois entrei na pasta com cd .git/ e listei com ls.
+		- Voltar: cd ..
+		- 
+		- 
+- git add
+	- Tinhamos um arquivo que estava untracked, ou seja, tinhamos acabado de criar o arquivo no repositório. Ao dar o comando git add o arquivo foi movido de untracked para staged
+- git commit
+- Tracked (arquivos que são rastreados no git)
+	- 
+	- Staged - arquivos que estão se preparando para fazer parte de outro tipo de agrupamento 
+	- Unmodified - ele reconhece que o arquivo foi submetido á mudança(s) pelo sha1 dele que foi alterado. > Staged
+	- Caso o arquivo que estava unmodified seja removido ele vai para untracked, onde o git não tem ciência dele.
+	- Quando o arquivo esta no estagio de staged ele esta sendo preparado para ser commited. Ele retorna todos para modified. Tira uma foto (snappshot) dos arquivos naquele momento.
+	- É um ciclo onde o arquivo fica passando por ele. 
+	- 
+	- Os seus arquivos ficam alternando entre os repositório de trabalho e staging área, a medida que vc vai adicionando novos arquivos e modificando os mesmos.
+	- 
+	- Quando vc tem um arquivo untracked (o git nao tinha ciência dele) e vc da um git add ele passa staged. Quando vc tem um arquivo modificado e vc da um git add, ele tambem passa para staging
+- Resolvendo conflitos
+- 
+
+- Copiando um repositório do github
+	- copiar a url
+	- abrir o git na pasta que vc deseja salvar o repositório
+	- git bash aberto: git clone + link do repositório
+	- abrir o repositório no terminal git - cd + endereço
+	- Criar novas pastas e arquivos
+	- git status mostra que há arquivos (untracked) novos mas que ainda não foram commitado
+	- git add .  para informar que queremos que seja considerado no controle de versão.  git status para verificar que ele esta verde. Falta empurrar
+	- git commit -m "Inclusão das anotações do curso de git e github"
+	- git status
+	- git push origin main (para empurrar o que queremos enviar para o github

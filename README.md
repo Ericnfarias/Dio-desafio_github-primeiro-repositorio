@@ -1,4 +1,4 @@
-# Dio-desafio_github-primeiro-repositorio
+# Dio-desafio_github-primeiro-repositório
 Repositório criado para o desafio de projeto
 
-[Sintaxe básica do Markdown](https://www.markdownguide.org/basic-syntax/)
+Aqui, foi colocada todas as anotações que fiz durante o treinamento de Git/GitHub. Este material serve como apoio para aprender a utilizar o Git/gitHub.
